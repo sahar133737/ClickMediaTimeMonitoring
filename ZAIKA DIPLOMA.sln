@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZAIKA DIPLOMA", "ZAIKA DIPLOMA\ZAIKA DIPLOMA.csproj", "{FC528494-0097-4FBB-A2B7-D42848408BCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC528494-0097-4FBB-A2B7-D42848408BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC528494-0097-4FBB-A2B7-D42848408BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC528494-0097-4FBB-A2B7-D42848408BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC528494-0097-4FBB-A2B7-D42848408BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5E14706-C352-4E1D-8497-CDB9DC70A192}
+	EndGlobalSection
+EndGlobal
