@@ -7,10 +7,10 @@ namespace ClickMediaWorkTime.Infrastructure
     internal static class Db
     {
         public static string MasterConnectionString =>
-            ConfigurationManager.ConnectionStrings["MasterConnection"].ConnectionString;
+            ConnectionStringHelper.GetRequired("MasterConnection");
 
         public static string AppConnectionString =>
-            ConfigurationManager.ConnectionStrings["AppConnection"].ConnectionString;
+            ConnectionStringHelper.GetRequired("AppConnection");
 
         public static object ExecuteScalar(string sql, params SqlParameter[] parameters)
         {

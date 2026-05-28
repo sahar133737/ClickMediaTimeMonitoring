@@ -49,17 +49,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <!-- Подпись ClickOnce-манифеста отключена: на других ПК нет временного сертификата разработчика -->
   <PropertyGroup>
-    <ManifestCertificateThumbprint>8CA142CCDEA66C40AB498E5F0DBAC84064282DBB</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>ZAIKA DIPLOMA_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -126,6 +119,7 @@
     <Compile Include="Forms\WorkTimeEntryEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Infrastructure\ConnectionStringHelper.cs" />
     <Compile Include="Infrastructure\Db.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,7 +179,7 @@
     <None Include="Sql\02_seed_demo_data.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ZAIKA DIPLOMA_TemporaryKey.pfx" />
+    <None Include="App.config.example" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

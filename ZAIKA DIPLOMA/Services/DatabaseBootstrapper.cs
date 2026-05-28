@@ -12,6 +12,22 @@ namespace ClickMediaWorkTime.Services
     {
         public static void EnsureDatabase()
         {
+            try
+            {
+                ConnectionStringHelper.TestOpen(Db.MasterConnectionString);
+            }
+            catch (Exception ex)
+            {
+                var server = ConnectionStringHelper.DescribeServer(Db.MasterConnectionString);
+                throw new InvalidOperationException(
+                    "Не удалось подключиться к SQL Server («" + server + "»)." + Environment.NewLine +
+                    "Проверьте, что SQL Server или LocalDB установлен и запущен, а в файле " +
+                    "ClickMediaWorkTime.exe.config (рядом с программой) указан правильный Server." +
+                    Environment.NewLine + Environment.NewLine +
+                    "Техническое описание: " + ex.Message,
+                    ex);
+            }
+
             var scriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sql", "01_create_schema.sql");
             if (!File.Exists(scriptPath))
             {
